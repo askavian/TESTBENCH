@@ -1,21 +1,14 @@
-#NUMBERS VARIABLES
+color = "blue"
+primary = True
 
-num_int = 10
-print(num_int)
+second_statement = None 
 
-num_float = 20.25
-print(num_float)
+if(color == "blue"):
+	first_statement = "The color is blue"
 
+if(color == 'red' or primary):
+	second_statement = 'Either the color is red or primary is True'
 
-#STRINGS VARIABLES
-
-single_quote = 'A string using single quotes'
-print(single_quote)
-
-double_quote = "A string using double quotes"
-print(double_quote)
-
-
-
-
+print(first_statement)
+print(second_statement)
 

@@ -1,16 +1,17 @@
-//NUMBERS VARIABLES
+let result = true;
+let city = 'Dublin';
+let firstResponse;
+let secondResponse;
 
-let numint = 10;
-console.log(numint)
+if(result) {
+	firstResponse = 'result is true';
+}
 
-let numFloat = 20.25;
-console.log(numFloat)
+if(city) {
+	secondResponse = 'Thank you for choosing a city';
+} else {
+	secondResponse = 'You need to fill in the name of a City';
+}
 
-
-//STRINGS VARIABLES
-
-let singleQuote = 'A string using single quotes'
-console.log(singleQuote)
-
-let doubleQuote = "A string using double quotes"
-console.log(doubleQuote)
+console.log(firstResponse);
+console.log(secondResponse);
