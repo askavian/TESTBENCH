@@ -23,3 +23,35 @@ console.log(admin)
 
 let passwordRequired = false
 console.log(passwordRequired)
+
+
+//If/ELSE If/ELSE
+
+let money, time, vacation, workMore, makeTime;
+
+money = true;
+time = false;
+if (money && time) {
+  vacation = true;
+  console.log('Party Time!');
+} else if (money && !time) {
+  vacation = false;
+  makeTime = true;
+  console.log('Slack Off More!');
+} else if (time && !money) {
+  vacation = false;
+  workMore = true;
+  console.log('Work Harder!');
+} else {
+  vacation = false;
+  workMore = true;
+  workMore = true;
+  console.log('Good Luck Brother!');
+}
+
+
+// BASIC LOOP 
+
+for (i = 0; i <= 10; i++) {
+    console.log(i);
+  }
