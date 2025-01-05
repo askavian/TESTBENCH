@@ -1,17 +1,2 @@
-let result = true;
-let city = 'Dublin';
-let firstResponse;
-let secondResponse;
-
-if(result) {
-	firstResponse = 'result is true';
-}
-
-if(city) {
-	secondResponse = 'Thank you for choosing a city';
-} else {
-	secondResponse = 'You need to fill in the name of a City';
-}
-
-console.log(firstResponse);
-console.log(secondResponse);
+let variable = 42;
+console.log(variable);
