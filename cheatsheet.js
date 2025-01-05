@@ -69,27 +69,134 @@ console.log(`${fullName} lives at ${home}`);
 
 // TRIMING REPLACING 
 
-let fullName = "       JaNe DoE       ";
+let fullName1 = "       JaNe DoE       ";
 let email = "@email.com";
-let fullEmail = fullName.toLowerCase().trim().replace(" ", "") + email;
+let fullEmail = fullName1.toLowerCase().trim().replace(" ", "") + email;
 
-console.log(fullName);
+console.log(fullName1);
 console.log(email);
 console.log(fullEmail);
 
 
-console.log(fullName);
-fullName = fullName.trim();
-console.log(fullName);
+console.log(fullName1);
+fullName = fullName1.trim();
+console.log(fullName1);
 
-fullName = fullName.toLowerCase().replace(" ", "");
-console.log(fullName);
+fullName = fullName1.toLowerCase().replace(" ", "");
+console.log(fullName1);
 
-fullEmail = fullName + email;
+fullEmail = fullName1 + email;
 console.log(fullEmail);
 console.log(fullEmail.includes("@"));
 
-console.log(fullName.toUpperCase());
+console.log(fullName1.toUpperCase());
+
+
+const specialWord = "Supercalifragilisticexpialidocious";
+
+console.log(specialWord.length)
+console.log(specialWord.slice(9,20))
+
+//OR
+
+console.log(specialWord.length);
+let indexOfF = specialWord.indexOf('f');
+let indexOfLastE = specialWord.lastIndexOf('e');
+console.log(specialWord.slice(indexOfF, indexOfLastE));
+
+
+
+//BOOLEANS AND FLIPPING BANG
+
+let isAdult = true;
+
+let fullPrice = isAdult;
+let getChildDiscount = !isAdult;
+
+console.log(fullPrice);
+console.log(getChildDiscount);
+
+
+
+// ARRAYS DATA LIST
+
+let person = {
+  firstName: "Siobhan",
+  lastName: "Finnegan",
+  age: 30,
+  country: "USA",
+  alive: true
+};
+
+console.log(person.age);
+
+person.age = 42;
+console.log(person.age);
+
+delete person.alive;
+console.log(person);
+
+person.country = "Ireland";
+console.log(person);
+
+
+//MODIFYING LISTS AND ARRAYS
+
+let car = {
+  make: "Ford",
+  colour: "silver",
+  mileage: 30000,
+  manufactureYear: 2022, 
+  fueled: true
+};
+console.log(car);
+
+car.colour = "blue";
+
+delete car.manufactureYear;
+
+console.log(car);
+
+car.price = 43000;
+
+console.log(car);
+
+
+//NESTING ARRAYS AND LISTS
+
+let company = {
+  name: 'Apple',
+  founded: 1976,
+  financials: {
+    incomeStatement: {
+      years: [1991, 1990, 1989],
+      revenue: [125, 120, 115],
+      costs: [100, 100, 100],
+      profit: [25, 20, 15]
+    },
+    balanceSheet: {
+      years: [1991, 1990, 1989],
+      assets: [200, 190, 180],
+      liabilities: [100, 95, 90],
+      equity: [100, 95, 90]
+    },
+    cashFlow: {
+      years: [1991, 1990, 1989],
+      operating: [75, 65, 55],
+      investing: [22, 20, 18],
+      financing: [-94, -80, -75]    
+    }
+  },
+  competitors: ['Microsoft', 'Amazon', 'Samsung']
+};
+
+console.log(company.name);
+console.log(company.competitors);
+console.log(company.competitors[0]);
+console.log(company.financials.incomeStatement.years);
+console.log(company.financials.incomeStatement.revenue[0]);
+
+
 
 
 //NUMBERS VARIABLES
@@ -99,6 +206,24 @@ console.log(numint)
 
 let numFloat = 20.25;
 console.log(numFloat)
+
+
+let myInt = '10.568163';
+let myFloat = '1.2758237364';
+
+// Write your code here
+myInt = parseInt(myInt);
+myFloat = parseFloat(myFloat);
+
+let result = myInt + myFloat;
+
+let resultFixed = result.toFixed(2);
+console.log(resultFixed);
+console.log(typeof resultFixed);
+
+let resultFixedNum = Number(resultFixed);
+console.log(resultFixedNum);
+console.log(typeof resultFixedNum);
 
 
 //STRINGS VARIABLES
