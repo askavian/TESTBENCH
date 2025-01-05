@@ -1,2 +1,3 @@
-let variable = 42;
-console.log(variable);
+let userName = "Alice";
+let greeting = "Hello " + userName;
+console.log(greeting);

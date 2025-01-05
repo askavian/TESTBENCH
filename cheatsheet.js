@@ -1,3 +1,97 @@
+// Guess the number game!
+
+let secretNumber = 7; // Change this number to set the secret number
+let guessedNumber = 7; // Change this number to guess the secret number
+
+if (guessedNumber === secretNumber) {
+    console.log("Congratulations! You guessed the secret number!");
+} else {
+    console.log("Oops! That's not the secret number. Try again!");
+}
+
+
+//DECLARING VARIANBLES LET AND CONST
+
+// Part 1: Declare your variables here
+let myFavouriteBook = "Lord of the Rings";
+const myBirthYear = 1982;
+
+console.log(myFavouriteBook);
+console.log(myBirthYear);
+
+// Part 2: Adjust your favourite book here
+myFavouriteBook = "The Hitchhiker's Guide to the Galaxy";
+
+console.log(myFavouriteBook);
+console.log(myBirthYear);
+
+
+let userName = "Alice";
+let greeting = "Hello " + userName;
+console.log(greeting);
+
+let firstName = "Parvati";
+let lastName = "Patil";
+console.log(firstName + " " + lastName);
+
+
+//TYPEOF 
+
+let var1 = "To be, or not to be";
+let var2 = false;
+let var3 = "728";
+let var4 = 'true';
+let var5 = 172;
+
+console.log(typeof var1);
+console.log(typeof var2);
+console.log(typeof var3);
+console.log(typeof var4);
+console.log(typeof var5);
+
+
+// DIFFERENT QUOTATION MARKS ' OR "
+// Write your code here
+let string1 = "'Twas the best of times, 'twas the worst of times.";
+let string2 = 'Shakespeare wrote, "To be, or not to be: that is the question".';
+
+console.log(string1)
+console.log(string2)
+
+
+// LITTERAL
+
+let fullName = "Elrond";
+let home = "Rivendell";
+
+console.log(`${fullName} lives at ${home}`);
+
+
+// TRIMING REPLACING 
+
+let fullName = "       JaNe DoE       ";
+let email = "@email.com";
+let fullEmail = fullName.toLowerCase().trim().replace(" ", "") + email;
+
+console.log(fullName);
+console.log(email);
+console.log(fullEmail);
+
+
+console.log(fullName);
+fullName = fullName.trim();
+console.log(fullName);
+
+fullName = fullName.toLowerCase().replace(" ", "");
+console.log(fullName);
+
+fullEmail = fullName + email;
+console.log(fullEmail);
+console.log(fullEmail.includes("@"));
+
+console.log(fullName.toUpperCase());
+
+
 //NUMBERS VARIABLES
 
 let numint = 10;
