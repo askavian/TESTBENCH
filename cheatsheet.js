@@ -199,6 +199,69 @@ console.log(company.financials.incomeStatement.revenue[0]);
 
 
 
+// METHODS MAGIC
+
+const car = {
+  whereabouts: "garage",
+  ignition: "off",
+  fueled: true,
+  start() {
+    console.log("Vroom Vroom");
+    this.ignition = "on";
+  }
+};
+
+console.log(car.ignition);
+car.start();
+console.log(car.ignition);
+
+
+// OPTIONAL ARGUMENTS
+
+let myString = "To be or not to be, that is the question!";
+
+console.log(myString.indexOf('be'));
+console.log(myString.indexOf('be', 4));
+
+let firstIndexOfBe = myString.indexOf('be');
+console.log(firstIndexOfBe);
+console.log(myString.indexOf('be', firstIndexOfBe + 1));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //NUMBERS VARIABLES
 
 let numint = 10;
