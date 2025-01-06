@@ -1,3 +1,85 @@
+// TERNARY EXPRESSION
+
+let weather = "raining";
+let weatherStatus = weather === "raining" ? "Take an umbrella!" : "Enjoy the sunshine!";
+console.log(weatherStatus);
+
+
+
+let numApples = 0;
+
+let appleText = numApples === 1 ? "apple" : "apples";
+console.log(`You have ${numApples} ${appleText}.`);
+
+
+
+// ARROW FUNCTIONS
+
+const addTwoNums = (numOne, numTwo) => numOne + numTwo;
+let result1 = addTwoNums(5, 6);
+console.log(result1);
+
+
+/*PRE ARROW FUNCTION
+function introduceMe(fName, lName) {
+    return `${lName}, ${fName} ${lName}`;
+}
+console.log(introduceMe("James", "Bond"));
+
+
+function circleCircumference(radius) {
+    return Math.PI * radius * 2;
+}
+console.log(circleCircumference(5));
+
+
+function multilingualGoodbye() {
+    let goodbyes = ["auf Wiedersehen", "goodbye", "adieu", "ciao", "adios"];
+    let randomIndex = Math.floor(Math.random() * goodbyes.length);
+    return goodbyes[randomIndex];
+}
+console.log(multilingualGoodbye());
+
+
+function createPersonObject(fName, age) {
+    let personObject = {
+        fName: fName,
+        age: age
+    };
+    return personObject;
+}
+let finn = createPersonObject("Finn", 13);
+console.log(finn);// Write the arrow functions here
+*/
+
+// PORST ARROW FUNCTION
+
+const introduceMe = (fName, lName) => `${lName}, ${fName} ${lName}`;
+console.log(introduceMe("James", "Bond"));
+
+
+const circleCircumference = radius => Math.PI * radius * 2;
+console.log(circleCircumference(5));
+
+
+const multilingualGoodbye = () => {
+    let goodbyes = ["auf Wiedersehen", "goodbye", "adieu", "ciao", "adios"];
+    let randomIndex = Math.floor(Math.random() * goodbyes.length);
+    return goodbyes[randomIndex];
+};
+console.log(multilingualGoodbye());
+
+
+const createPersonObject = (fName, age) => ({fName: fName, age: age});
+let finn = createPersonObject("Finn", 13);
+console.log(finn);
+
+
+
+
+
+
+
 // Guess the number game!
 
 let secretNumber = 7; // Change this number to set the secret number
