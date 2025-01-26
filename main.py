@@ -94,3 +94,46 @@ print(type(21.56))
 print(type('A string of text'))
 print(type(True))
 
+
+# INTERGER vs. FLOAT
+num1 = 10 # Integer INT are allways full numbers (incl.0)
+num2 = 10.00 # FLOATS are allways numbers with decimals
+print(type(num1))
+print(type(num2))
+
+
+
+# NONE
+
+a = 1
+a = None
+print(a)
+def donothing():
+    b = 0
+print(donothing())
+
+
+# COMMON PRACTISE TO DECLARE VALUE WHEN NEEDED IN CODE
+age = None
+total = None
+print(age)
+print(total)
+age = 20
+print(age)
+print(total)
+
+
+# ' OR " QUOTES 
+print('Then Mike said "What is that?"') # use different quotes
+print("It's a beautiful day")
+
+
+# INPUT VALUES AND CONVERTIG DATA TYPES
+first_number = input("Input your first number:") # by default takes Input ONLY as a string
+second_number = input("Input your second number:")
+print(first_number + second_number)
+
+first_number = int(input("Input your first number:")) # Converts input to an INTEGER
+second_number = int(input("Input your second number:"))
+
+print(first_number + second_number)
