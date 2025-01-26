@@ -1,11 +1,11 @@
-dwarves = "Grumpy, Dopey, Doc, Happy, Bashful, Sneezy, Sleepy"
-print(dwarves)
+a = 10
+b = 5
 
-lowercase_string = dwarves.lower()
-print(lowercase_string)
+result_one = a > b and a > 10
+print(result_one)
 
-commas_removed = lowercase_string.replace(",", "")
-print(commas_removed)
+result_two = a == 5 or b < 5
+print(result_two)
 
-split_list = commas_removed.split()
-print(split_list)
+result_three = not(result_two)
+print(result_three)
