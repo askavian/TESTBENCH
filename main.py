@@ -1,11 +1,8 @@
-a = 10
-b = 5
+num = 1
+num_two = num
+num == num_two
+id(num)
+id(num_two)
 
-result_one = a > b and a > 10
-print(result_one)
-
-result_two = a == 5 or b < 5
-print(result_two)
-
-result_three = not(result_two)
-print(result_three)
+print(id(num))
+print(id(num_two))

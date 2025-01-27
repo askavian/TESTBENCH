@@ -56,3 +56,42 @@ print(bool(b))
 print(bool(c))
 print(bool(d))
 print(bool(e))
+
+
+
+# EQUALITY VS. IDENTIDY
+num = 1
+bool = True
+print(num == bool) # equality
+print(num is bool) # identity
+
+a=1
+b=1.0
+print(a==b)
+print(a is b)
+print(id(a))
+print(id(b))
+# a and b have the same numeric value but a different type
+c=b
+print(b==c)
+print(b is c)
+print(id(b))
+print(id(c))
+# b and c are equal in value and identity
+
+list_a = [10, 20, 30,]
+list_b = [10, 20, 30,]
+list_c = list_a
+print(list_a is list_b) # IS
+print(list_a == list_b) # EQUAL
+print(list_a is list_c) # IS
+
+
+
+# Checking Containment with Containment Operators
+print('Program' in 'Programming')
+print('spam' in ['spam', 'egg'])
+print('sausage' not in ['spam', 'egg'])
+print("rat" in "crate")
+print("ink" not in "sink")
+print("robbie" in ["gary", "howard", "mark", "jason"])
