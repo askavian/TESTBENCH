@@ -96,7 +96,7 @@ print("""
 
     """)
 
-# preparations 
+# set up basic variables 
 player = input("""
                
     What is your name Rookie?
@@ -157,15 +157,38 @@ while not play_game:
         print("ONLY chose between 'easy', 'medium' or 'hard'")
 
 
+# CASE FILES RANDOMIZER 
+
+import random
+case_files = ["c01", "c02", "c03", "c04", "c05"]
+random.shuffle(case_files)
+
+print(case_files) # debugging
+
+
+while play_game:
+    next_case = input("Next individual in line? y/n ")
+    
+    if next_case == "y":
+        import c01
+    elif next_case == "n":
+        print("Now closing the game...")
+        play_game = False
+    else:
+        print("That is not a valid option. Please try again.")
+
+print("Thanks for playing")
+
+
 # import case files
 import c01, c02, c03, c04, c05
 
 # DEBUGGING CORRECTLY LOADING FILES
-print(c01.loaded_c01)  
-print(c02.loaded_c02)
-print(c03.loaded_c03)
-print(c04.loaded_c04)
-print(c05.loaded_c05)
+#print(c01.loaded_c01)  
+#print(c02.loaded_c02)
+#print(c03.loaded_c03)
+#print(c04.loaded_c04)
+#print(c05.loaded_c05)
 
 print("END SCRIPT") # debugging
 
@@ -178,3 +201,9 @@ print(grade) # Between A - F
 print(difficulty) # hard, medium or easy
 print(time) # 30 Minutes (hard), 45 Minutes (medium) and 60 Minutes (easy)
 print(people_left) # FOR LATER EXPANSION number of applicants can be tied to the difficulty level as well (currently set to 5)
+
+print("""
+
+END SCRIPT!
+      
+""") # debugging, delete before release
