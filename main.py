@@ -1,10 +1,11 @@
 # GLOBAL VARIABLES
-play_game = False
-time = None
-player = None
-score = None
-grade = None
-difficulty = None
+play_game = False # Checks if the game is running at all
+player = None # Player Name
+score = None # Score between 0 to 100
+grade = None # Between A - F
+difficulty = None # hard, medium or easy
+time = None # 30 Minutes (hard), 45 Minutes (medium) and 60 Minutes (easy)
+people_left = None # FOR LATER EXPANSION number of applicants can be tied to the difficulty level as well
 
 
 # INTRODUCTION
@@ -102,41 +103,9 @@ player = input("""
 
     """)
 
-difficulty = str(input("Select your difficulty level: hard, medium, easy:"))
-if difficulty.lower == "hard":
-    time = 30
-    print("""You have """ + str(time) + """ minutes until your replacement arrives and your shift ends.""")
-elif difficulty.lower == "medium":
-    time = 45
-    print("""You have """ + str(time) + """ minutes until your replacement arrives and your shift ends.""")
-elif difficulty.lower == "easy":
-    time = 60
-    print("""You have """ + str(time) + """ minutes until your replacement arrives and your shift ends.""")
-else:
-    print("You have to chose between 'easy', 'medium' or 'hard'")
-
-print(time)    ### BUGGY
-
-
-
-print("""
-      
-    You shift has not yet started!
-      
-    """)
-
-if not play_game:
-    start_game = input("""
-
-    You can start your shift whenever you are ready. 
-                       
-    Type "begin" to start shift. 
-
-    """)
-    if start_game.lower() == "begin":
-        play_game = True
-        print("""
-    
+while not play_game:
+    difficulty = str(input("""
+                           
     Welcome to your first shift """ + str(player) + """!
               
     It is your job to decide who may enter the Occupied Terretory of Argonia and who may not. 
@@ -147,12 +116,65 @@ if not play_game:
     But there are also good people out there that we need to help and that will better the situation in the 
     Occupied Terretories.
 
-    Ultimately, the decision is yours.  
+    Ultimately, the decision is yours!  
 
-    You have """ + str(time) + """ minutes until your replacement arrives and your shift ends. 
+    Good Luck Rookie!                   
+                       
 
-    Good Luck!                   
+    You are about to begin your first shift as a new Officer. 
 
+    Select your difficulty level: 'hard', 'medium', 'easy' to start the game:
+                           
+    """))
+    if difficulty == 'hard':
+        time = 30
+        people_left = 5 # ties to difficulty in future expansion
+        play_game = True
+        print("""
+              
+    You have """ + str(time) + """ minutes until your replacement arrives and your shift ends.
+    
     """)
-        
-        print(play_game)
+    elif difficulty == 'medium':
+        time = 45
+        people_left = 5  # ties to difficulty in future expansion
+        play_game = True
+        print("""
+              
+    You have """ + str(time) + """ minutes until your replacement arrives and your shift ends.
+    
+    """)
+    elif difficulty == 'easy':
+        time = 60
+        people_left = 5  # ties to difficulty in future expansion
+        play_game = True
+        print("""
+              
+    You have """ + str(time) + """ minutes until your replacement arrives and your shift ends.
+    
+    """)
+    else:
+        print("ONLY chose between 'easy', 'medium' or 'hard'")
+
+
+# import case files
+import c01, c02, c03, c04, c05
+
+# DEBUGGING CORRECTLY LOADING FILES
+print(c01.loaded_c01)  
+print(c02.loaded_c02)
+print(c03.loaded_c03)
+print(c04.loaded_c04)
+print(c05.loaded_c05)
+
+print("END SCRIPT") # debugging
+
+
+# DEBUGGING GLOBAL VARIABLES
+print(play_game) # Checks if the game is running at all
+print(player) # Player Name
+print(score) # Score between 0 to 100
+print(grade) # Between A - F
+print(difficulty) # hard, medium or easy
+print(time) # 30 Minutes (hard), 45 Minutes (medium) and 60 Minutes (easy)
+print(people_left) # FOR LATER EXPANSION number of applicants can be tied to the difficulty level as well (currently set to 5)

@@ -1,4 +1,5 @@
-time_remaining = 30
+loaded_c01 = "c01 loaded successfully" #debugging
+from main import time
 
 abl_01 = str("""
              Name: Abdul Rahim
@@ -15,13 +16,13 @@ abl_01 = str("""
              """)
 
 print(abl_01)
-print("You have " + str(time_remaining) + " minutes remaining.")
+print("You have " + str(time) + " minutes remaining.")
 
 abl_01_des = None
 
 abl_01_des = str(input("How do you want to proceed? 'Let him pass.' or 'Refuse Entry' or 'Perform full check'?"))
 if abl_01_des == 'Let him pass.':
-    time_remaining = (time_remaining - 1) 
+    time = (time - 1) 
     print("""
           Abdul Rahim passes through the border crossing uninterrupted. 
           
@@ -35,14 +36,14 @@ if abl_01_des == 'Let him pass.':
           You lose!
           """)
 elif abl_01_des == 'Refuse Entry':
-    time_remaining = (time_remaining - 2) 
+    time = (time - 2) 
     print("""
           Abdul Rahim is shouting about racial profiling and why you refuse him. 
               
           But ultimately he leaves the border crossing and returns.
           """)
 elif abl_01_des == 'Perform full check':
-    time_remaining = (time_remaining - 15) 
+    time = (time - 15) 
     print("""
           You perform a full check on Abdul and his belonging. 
                   
@@ -55,7 +56,7 @@ elif abl_01_des == 'Perform full check':
           You win!
           """)
 else:
-    time_remaining = (time_remaining - 10) 
+    time = (time - 10) 
     print("Abdul gets bored and leaves after a while.")
 
-print("You have " + str(time_remaining) + " minutes remaining.")
+print("You have " + str(time) + " minutes remaining.")
