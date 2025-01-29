@@ -53,7 +53,7 @@ while c04_conclusion == None:
         time = (time - 2) 
         score = score + 1
         people_left = people_left - 1
-        c03_conclusion = c04_conclusion_bad
+        c04_conclusion = c04_conclusion_bad
         print("""
         
         c04 DENY      
