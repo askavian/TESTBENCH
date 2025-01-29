@@ -1,14 +1,6 @@
-color = "blue"
-primary = True
+import test
 
-second_statement = None 
-
-if(color == "blue"):
-	first_statement = "The color is blue"
-
-if(color == 'red' or primary):
-	second_statement = 'Either the color is red or primary is True'
-
-print(first_statement)
-print(second_statement)
-
+try:
+    test.get_user_age()
+except ValueError:
+    print("That's not a valid value for your age!")
