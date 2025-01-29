@@ -2,7 +2,12 @@
 # print(loaded_c03)
 
 from main import time # imports the time remaining value from main
+from main import score # imports the score value
+from main import people_left # people left
 c03_conclusion = None # Final Conclusion State for this case
+c03_conclusion_good = "c03 GOOD OUTCOME"
+c03_conclusion_bad = "c03 BAD OUTCOME"
+c03_conclusion_secret = "c03 SECRET OUTCOME" # unused at the moment
 
 c03_01 = str("""
              
@@ -10,7 +15,7 @@ c03_01 = str("""
         Date of Birth: tbd
         Place of Birth: tbd
 
-        c03 OVERVIEW          
+        c03 OVERVIEW    
         XXXDUMMYTEXTXXX
              
         """)
@@ -35,16 +40,20 @@ while c03_conclusion == None:
         """))
     if c03_01_des == 'APPROVE':
         time = (time - 1) 
-        c02_conclusion = 1
+        score = score + 10 # TBD
+        people_left = people_left - 1
+        c03_conclusion = c03_conclusion_good
         print("""
         
-        c03 APPROVE
+        c03 APPROVE      
         XXXDUMMYTEXTXXX
         
         """)
     elif c03_01_des == 'DENY':
         time = (time - 2) 
-        c03_conclusion = 2
+        score = score + 1
+        people_left = people_left -1
+        c02_conclusion = c03_conclusion_bad
         print("""
         
         c03 DENY      
@@ -55,7 +64,7 @@ while c03_conclusion == None:
         time = (time - 10)
         print("""
         
-        c03 search
+        c03 search      
         XXXDUMMYTEXTXXX
                   
         """)
@@ -63,7 +72,7 @@ while c03_conclusion == None:
         time = (time - 5) 
         print("""
         
-        c03 luggage
+        c03 luggage      
         XXXDUMMYTEXTXXX
                   
         """)
@@ -71,19 +80,23 @@ while c03_conclusion == None:
         time = (time - 5) 
         print("""
         
-        c03 question
+        c03 question      
         XXXDUMMYTEXTXXX
                   
         """)
-else:
-    time = (time - 10) 
-    print("""
-          
+    else:
+        time = (time - 10) 
+        score = score + 5
+        people_left = people_left -1
+        c03_conclusion = c03_conclusion_bad
+        print("""
+
         c03 else
         XXXDUMMYTEXTXXX
         
         """)
     
-print(c03_conclusion)    
+print(c03_conclusion) 
+print(score) 
 
 print("You have " + str(time) + " minutes remaining.")

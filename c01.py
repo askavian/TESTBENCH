@@ -3,10 +3,11 @@
 
 from main import time # imports the time remaining value from main
 from main import score # imports the score value
+from main import people_left # people left
 c01_conclusion = None # Final Conclusion State for this case
 c01_conclusion_good = "c01 GOOD OUTCOME"
-c01_conclusion_bad = "c01 GOOD OUTCOME"
-c01_conclusion_secret = "c01 GOOD OUTCOME"
+c01_conclusion_bad = "c01 BAD OUTCOME"
+c01_conclusion_secret = "c01 SECRET OUTCOME"
 
 c01_01 = str("""
              
@@ -45,6 +46,7 @@ while c01_conclusion == None:
     if c01_01_des == 'APPROVE':
             time = (time - 1) 
             score = score + 1 # no modification
+            people_left = people_left - 1
             c01_conclusion = c01_conclusion_bad
             print("""
         
@@ -63,6 +65,7 @@ while c01_conclusion == None:
     elif c01_01_des == 'DENY':
             time = (time - 2) 
             score = score + 10
+            people_left = people_left - 1
             c01_conclusion = c01_conclusion_good
             print("""
         
@@ -74,6 +77,7 @@ while c01_conclusion == None:
     elif c01_01_des == 'search':
             time = (time - 10)
             score = score + 30
+            people_left = people_left - 1
             c01_conclusion = c01_conclusion_secret # secret conclusion 
             print("""
         
@@ -111,11 +115,12 @@ while c01_conclusion == None:
         their accomodation way in advance within a secure Hotel with Security when visiting Argonia.  
                   
         """)
-else:
-    time = (time - 10) 
-    score = score + 5
-    c01_conclusion = c01_conclusion_good # deny
-    print("""
+    else:
+            time = (time - 10) 
+            score = score + 5
+            people_left = people_left - 1
+            c01_conclusion = c01_conclusion_good # deny
+            print("""
           
         Abdul gets bored and leaves after a while.
         
@@ -126,4 +131,3 @@ print(score)
 
 print("You have " + str(time) + " minutes remaining.")
 
-# CONCLUSION

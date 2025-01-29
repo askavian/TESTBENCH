@@ -2,7 +2,12 @@
 # print(loaded_c02)  
 
 from main import time # imports the time remaining value from main
+from main import score # imports the score value
+from main import people_left # people left
 c02_conclusion = None # Final Conclusion State for this case
+c02_conclusion_good = "c02 GOOD OUTCOME"
+c02_conclusion_bad = "c02 BAD OUTCOME"
+c02_conclusion_secret = "c02 SECRET OUTCOME" # unused at the moment
 
 c02_01 = str("""
              
@@ -35,7 +40,9 @@ while c02_conclusion == None:
         """))
     if c02_01_des == 'APPROVE':
         time = (time - 1) 
-        c02_conclusion = 1
+        score = score + 10 # TBD
+        people_left = people_left - 1
+        c02_conclusion = c02_conclusion_good
         print("""
         
         c02 APPROVE      
@@ -44,7 +51,9 @@ while c02_conclusion == None:
         """)
     elif c02_01_des == 'DENY':
         time = (time - 2) 
-        c02_conclusion = 2
+        score = score + 1
+        people_left = people_left - 1
+        c02_conclusion = c02_conclusion_bad
         print("""
         
         c02 DENY      
@@ -75,15 +84,19 @@ while c02_conclusion == None:
         XXXDUMMYTEXTXXX
                   
         """)
-else:
-    time = (time - 10) 
-    print("""
+    else:
+        time = (time - 10) 
+        score = score + 5
+        people_left = people_left -1
+        c02_conclusion = c02_conclusion_bad
+        print("""
 
         c02 else
         XXXDUMMYTEXTXXX
         
         """)
     
-print(c02_conclusion)    
+print(c02_conclusion) 
+print(score) 
 
 print("You have " + str(time) + " minutes remaining.")

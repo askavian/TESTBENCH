@@ -1,7 +1,7 @@
 # GLOBAL VARIABLES
 play_game = False # Checks if the game is running at all
 player = None # Player Name
-score = 0 # Score between 0 to 100
+score = 0 # Needs to be Integer Score between 0 to 100
 grade = None # Between A - F
 difficulty = None # hard, medium or easy
 time = None # 30 Minutes (hard), 45 Minutes (medium) and 60 Minutes (easy)
@@ -159,33 +159,74 @@ while not play_game:
 
 # CASE FILES RANDOMIZER 
 
-import random
-case_files = ["c01", "c02", "c03", "c04", "c05"]
-random.shuffle(case_files)
+#import random
+#case_files = ["c01", "c02", "c03", "c04", "c05"]
+#random.shuffle(case_files)
 
-print(case_files) # debugging
+#print(case_files) # debugging
 
 
-while play_game:
-    next_case = input("""
-      
-    Input 'next' to let the next individual in line in.
-                      
-    """)
-    if next_case == "next":
-        import c01
-    elif next_case == "n":
-        print("Now closing the game...")
-        play_game = False
-    else:
-        print("That is not a valid option. Please try again.")
+#while play_game:
+#    next_case = input("""
+#      
+#    Input 'next' to let the next individual in line in.
+#                      
+#    """)
+#    if next_case == "next":
+#        import c01
+#    elif next_case == "n":
+#        print("Now closing the game...")
+#    else:
+#        print("That is not a valid option. Please try again.")
 
-print("Thanks for playing")
+#print("Thanks for playing")
 
 
 # import case files
-import c01, c02, c03, c04, c05
+import c01
+print(play_game) # Checks if the game is running at all
+print(player) # Player Name
+print(score) # Score between 0 to 100
+print(grade) # Between A - F
+print(difficulty) # hard, medium or easy
+print(time) # 30 Minutes (hard), 45 Minutes (medium) and 60 Minutes (easy)
+print(people_left) # FOR LATER EXPANSION number of applicants can be tied to the difficulty level as well (currently set to 5)
 
+import c02
+print(play_game) # Checks if the game is running at all
+print(player) # Player Name
+print(score) # Score between 0 to 100
+print(grade) # Between A - F
+print(difficulty) # hard, medium or easy
+print(time) # 30 Minutes (hard), 45 Minutes (medium) and 60 Minutes (easy)
+print(people_left) # FOR LATER EXPANSION number of applicants can be tied to the difficulty level as well (currently set to 5)
+
+import c03
+print(play_game) # Checks if the game is running at all
+print(player) # Player Name
+print(score) # Score between 0 to 100
+print(grade) # Between A - F
+print(difficulty) # hard, medium or easy
+print(time) # 30 Minutes (hard), 45 Minutes (medium) and 60 Minutes (easy)
+print(people_left) # FOR LATER EXPANSION number of applicants can be tied to the difficulty level as well (currently set to 5)
+
+import c04
+print(play_game) # Checks if the game is running at all
+print(player) # Player Name
+print(score) # Score between 0 to 100
+print(grade) # Between A - F
+print(difficulty) # hard, medium or easy
+print(time) # 30 Minutes (hard), 45 Minutes (medium) and 60 Minutes (easy)
+print(people_left) # FOR LATER EXPANSION number of applicants can be tied to the difficulty level as well (currently set to 5)
+
+import c05
+print(play_game) # Checks if the game is running at all
+print(player) # Player Name
+print(score) # Score between 0 to 100
+print(grade) # Between A - F
+print(difficulty) # hard, medium or easy
+print(time) # 30 Minutes (hard), 45 Minutes (medium) and 60 Minutes (easy)
+print(people_left) # FOR LATER EXPANSION number of applicants can be tied to the difficulty level as well (currently set to 5)
 
 # DEBUGGING CORRECTLY LOADING FILES
 #print(c01.loaded_c01)  
