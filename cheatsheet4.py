@@ -154,6 +154,13 @@ while countdown_number >= 0:
 print("And We Have Lift Off!")
 
 
+# Counts from 0 to 9
+count = 0
+while count < 10 :
+    print(count)
+    count = count + 1
+
+
 # WHILE LOOP / GAME LOOP
 play_game = True
 while play_game:

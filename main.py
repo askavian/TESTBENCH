@@ -1,7 +1,7 @@
 # GLOBAL VARIABLES
 play_game = False # Checks if the game is running at all
 player = None # Player Name
-score = None # Score between 0 to 100
+score = 0 # Score between 0 to 100
 grade = None # Between A - F
 difficulty = None # hard, medium or easy
 time = None # 30 Minutes (hard), 45 Minutes (medium) and 60 Minutes (easy)
@@ -70,9 +70,9 @@ print("""
     You can choose between three difficulty levels. Each level grants you a different amount of time until your shift ends. 
     Easier tiers give you more time to be inquisitive about entry requests.  
       
-    "hard"    30 minutes until the end of your shift.
-    "medium"  45 minutes until the end of your shift.
-    "easy"    60 minutes until the end of your shift.    
+      "hard"    30 minutes until the end of your shift.
+      "medium"  45 minutes until the end of your shift.
+      "easy"    60 minutes until the end of your shift.    
 
       
       WINNING CONDITION:
@@ -167,9 +167,12 @@ print(case_files) # debugging
 
 
 while play_game:
-    next_case = input("Next individual in line? y/n ")
-    
-    if next_case == "y":
+    next_case = input("""
+      
+    Input 'next' to let the next individual in line in.
+                      
+    """)
+    if next_case == "next":
         import c01
     elif next_case == "n":
         print("Now closing the game...")
@@ -182,6 +185,7 @@ print("Thanks for playing")
 
 # import case files
 import c01, c02, c03, c04, c05
+
 
 # DEBUGGING CORRECTLY LOADING FILES
 #print(c01.loaded_c01)  
