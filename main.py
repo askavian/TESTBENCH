@@ -89,11 +89,6 @@ print("""
          55 tp 64 = E Grade
           0 tp 54 = F Grade
       
-    
-      RESTART
-      
-    You may allways "restart" your shift and reset the game!          
-
     """)
 
 # set up basic variables 
@@ -228,12 +223,6 @@ print(difficulty) # hard, medium or easy
 print(time) # 30 Minutes (hard), 45 Minutes (medium) and 60 Minutes (easy)
 print(people_left) # FOR LATER EXPANSION number of applicants can be tied to the difficulty level as well (currently set to 5)
 
-# DEBUGGING CORRECTLY LOADING FILES
-#print(c01.loaded_c01)  
-#print(c02.loaded_c02)
-#print(c03.loaded_c03)
-#print(c04.loaded_c04)
-#print(c05.loaded_c05)
 
 print("END SCRIPT") # debugging
 
