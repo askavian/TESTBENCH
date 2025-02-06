@@ -1,6 +1,4 @@
-import test
+name = input("What is your Name? ")
+color = input("What is your favorite color? ")
 
-try:
-    test.get_user_age()
-except ValueError:
-    print("That's not a valid value for your age!")
+print(name + " likes " + color)

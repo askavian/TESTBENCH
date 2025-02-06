@@ -173,3 +173,34 @@ while play_game:
     else:
         print("That is not a valid option. Please try again.")
 print("Thanks for playing")
+
+
+
+
+# CONTROLLING ITERATION (Break, Continue, Pass)
+
+for number in range(10):
+    if number == 5:
+        break    # break here
+    print(f'Number is  {number}')
+print('Left the loop')
+
+
+for number in range(10):
+    if number == 5:
+        continue    # continue here
+    print(f'Number is  {number}')
+print('Left the loop')
+
+
+for number in range(10):
+    if number == 5:
+        pass    # pass here
+    print(f'Number is  {number}')
+print('Left the loop')
+
+
+x = 0
+while x != 8:
+    x = x+1
+    print(x)
